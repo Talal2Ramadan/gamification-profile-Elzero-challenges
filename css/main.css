@@ -1,0 +1,247 @@
+/* ======================================= */
+/* ======================================= */
+/* Main page rules */
+* {
+    margin: 0;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+:root {
+    --Padding: 22px;
+}
+
+body {
+    background-color: #F5F5F5;
+}
+
+hr {
+    width: 1000px;
+    margin: auto;
+    opacity: 15%;
+}
+
+/* Main classes */
+.section-heading {
+    padding: 15px;
+    color: #FFF;
+    background-color: #607D8B;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: var(--Padding);
+}
+
+/* The main container */
+.container {
+    width: 1000px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: var(--Padding);
+
+}
+
+/* ======================================= */
+/* ======================================= */
+
+/* Starting The Main Section */
+main .container {
+    display: flex;
+    height: 280px;
+    position: relative;
+    padding: 0;
+}
+
+main .container::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    background-color: #EEE;
+    top: 0;
+    left: 24%;
+}
+
+main .container::after {
+    content: "140 Days in The Ship";
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 18px;
+    color: #8e8e8e;
+}
+
+/* Part I */
+main .container> :first-child {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+}
+
+main .container> :first-child img {
+    width: 70%;
+    object-fit: contain;
+    border-radius: 50%;
+    border: 5px solid #eee;
+}
+
+main .container> :first-child>span {
+    width: 85%;
+    background-color: #EEE;
+    height: 15px;
+    position: relative;
+}
+
+main .container> :first-child>span::after {
+    content: "";
+    position: absolute;
+    width: 80%;
+    background-color: #009688;
+    height: 100%;
+}
+
+main .container> :first-child p span {
+    color: #009688;
+    font-weight: bold;
+}
+
+/* Part II */
+main .container> :last-child {
+    width: 80%;
+    padding: 20px;
+    position: relative;
+}
+
+main .container> :last-child h1 {
+    margin-bottom: 20px;
+}
+
+main .container> :last-child p {
+    font-size: 20px;
+    line-height: 35px;
+    color: #8e8e8e;
+}
+
+/* Ending The Main Section */
+
+/* ======================================= */
+/* ======================================= */
+
+/* Starting Points Log */
+.points-log .container {
+    padding: var(--Padding);
+}
+
+.points-log .container div p {
+    padding: 15px 0;
+    font-size: 15px;
+}
+
+.points-log .container div p:not(:last-child) {
+    border-bottom: 1px solid #DDD;
+}
+
+.points-log .container div p :first-of-type {
+    color: #009688;
+    font-weight: bold;
+}
+
+.points-log .container div p :last-of-type {
+    color: #E91E63;
+    font-weight: bold;
+}
+
+/* Ending Points Log */
+
+/* ======================================= */
+/* ======================================= */
+
+/* Starting Trophies */
+.trophies .container div {
+    display: grid;
+    grid-template-columns: repeat(12, auto);
+    grid-template-rows: repeat(2, auto);
+    gap: 10px;
+}
+
+.trophies .container div img {
+    width: 100%;
+    filter: hue-rotate(6);
+}
+
+.trophies .container div img:nth-child(5),
+img:nth-child(8),
+img:nth-child(13),
+img:nth-child(16),
+img:nth-child(23) {
+    filter: grayscale(100%);
+    filter: opacity(.1);
+}
+
+/* Ending Trophies */
+
+/* ======================================= */
+/* ======================================= */
+
+/* Starting Ladder News */
+.ladder-news .container p {
+    margin-bottom: 10px;
+}
+
+.ladder-news .container p :first-of-type {
+    color: #E91E63;
+    font-weight: bold;
+}
+
+.ladder-news .container p :last-of-type {
+    color: #2198F3;
+    font-weight: bold;
+}
+
+/* Ending Ladder News */
+
+/* ======================================= */
+/* ======================================= */
+
+/* Starting Your Powers */
+.your-powers .container p {
+    position: relative;
+    padding: 15px 0;
+    font-size: 15px;
+}
+
+.your-powers .container p:not(:last-child) {
+    border-bottom: 1px solid #EEE;
+}
+
+.your-powers .container p:nth-child(2)::after,
+p:nth-child(3)::after,
+p:nth-child(5)::after,
+p:nth-child(7)::after {
+    content: "Yes";
+    position: absolute;
+    right: 3px;
+    color: green;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.your-powers .container p:nth-child(4)::after,
+p:nth-child(6)::after {
+    content: "Yes";
+    position: absolute;
+    right: 3px;
+    color: red;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Ending Your Powers */
+/* ======================================= */
+/* ======================================= */
+/* F i n i s h e d */
